@@ -1,5 +1,5 @@
 ﻿using System;
-
+//C:\Users\Puja\Source\Repos\PujaGrover\CoderGirl-CourseGrader\CourseGrader\Program.cs
 namespace CourseGrader
 {
     class Program
@@ -17,26 +17,30 @@ namespace CourseGrader
             Console.ReadLine();
         }
 
-        private static string GradeTestScores(int[] testScores)
+        public static string GradeTestScores(int[] testScores)
         {
             int sum = 0;
+
+            if (testScores.Length < 1)
+            return "fail";
+
             for (int i = 0; i < testScores.Length; i++)
             {
                 if (testScores[i] < 50)
                 { 
-                    Console.WriteLine(testScores[i]);
+                    //Console.WriteLine(testScores[i]);
                     return "fail";                   
                 }
                 else
                 { 
                 sum += testScores[i];
-                Console.WriteLine(sum);
+                //Console.WriteLine(sum);
                 }
             }
 
             int averageScore = sum / testScores.Length;
-            Console.WriteLine(sum);
-            Console.WriteLine(averageScore);
+            //Console.WriteLine(sum);
+            //Console.WriteLine(averageScore);
             if (averageScore < 70)
             {
                 return "fail";
